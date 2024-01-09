@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* https://coolors.co/palette/cb997e-eddcd2-fff1e6-f0efeb-ddbea9-a5a58d-b7b7a4 */
+/* https://coolors.co/4b9fc3-53afd6-5bc0eb-e9e360-fde74c-ccd645-9bc53d-e55934-f0692b-fa7921 */
+
+/* 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+} */
+
+body {
+  color: white;
+  background: linear-gradient(to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                      supported by Chrome, Edge, Opera and Firefox */
+}
+
+@layer base {
+
+  /* week indicator */
+  .container>div {
+    background: #aaccff;
+    border-radius: 0.25rem;
+  }
+
+  .container>div.unselected {
+    background: #5BC0EB;
+  }
+
+  .container>div.selected {
+    background: #4B9FC3;
+  }
+
+  /* .selection-area {
+    background: #F0EFEB;
+    border: 1px solid #CB997E;
+  } */
+
+  /* ... */
+}
